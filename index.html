@@ -115,14 +115,17 @@ a{color:inherit;text-decoration:none}
 @media (max-width:560px){.s-services{grid-template-columns:1fr}}
 .s-projects{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}
 .s-proj{display:grid;gap:16px}
-.s-proj .ph{border-radius:18px;aspect-ratio:4/5;display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1.4fr 1fr;gap:6px;overflow:hidden}
-.s-proj:first-child .ph{aspect-ratio:auto;height:100%;min-height:420px}
-.s-proj .ph i{display:block}
-.s-proj .ph i:first-child{grid-row:span 2}
+.s-proj .pj-img{position:relative;border-radius:18px;aspect-ratio:4/5;display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1.4fr 1fr;gap:6px;overflow:hidden}
+.s-proj:first-child .pj-img{aspect-ratio:auto;height:100%;min-height:420px}
+.s-proj .pj-img i{display:block}
+.s-proj .pj-img i:first-of-type{grid-row:span 2}
+.pj-tag{position:absolute;left:14px;top:14px;z-index:1;font-size:12.5px;padding:5px 12px;border-radius:999px;background:rgba(255,253,250,.92);color:#3a312a}
+.s-proj .pj-img{transition:transform .5s var(--ease)}
+.s-proj:hover .pj-img{transform:scale(1.015)}
 .s-proj h3{font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:-.02em}
 .s-proj p{font-size:14.5px;color:var(--muted)}
 .s-proj:first-child{grid-template-rows:1fr auto}
-@media (max-width:900px){.s-projects{grid-template-columns:1fr}.s-proj:first-child .ph{min-height:300px}}
+@media (max-width:900px){.s-projects{grid-template-columns:1fr}.s-proj:first-child .pj-img{min-height:300px}}
 .s-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
 .s-step .n{font-family:var(--serif);font-style:italic;font-size:54px;color:#C9A882;line-height:1}
 .s-step h3{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:-.02em;margin:18px 0 10px}
@@ -905,9 +908,9 @@ input[type=range].rng::-moz-range-thumb{width:24px;height:24px;border-radius:50%
     <div class="s-wrap">
       <div class="s-head"><h2 class="s-h2">Recently finished</h2><p>A few of the homes we handed back this year.</p></div>
       <div class="s-projects">
-        <article class="s-proj"><div class="ph"><i class="m-oak"></i><i class="m-terrazzo"></i><i class="m-zellige"></i></div><div><h3>Oudwijk kitchen</h3><p>1930s terrace, Utrecht · €19,400 · 6 weeks</p></div></article>
-        <article class="s-proj"><div class="ph"><i class="m-plaster"></i><i class="m-linen"></i><i class="m-brass"></i></div><div><h3>Canal house bathroom</h3><p>Jordaan, Amsterdam · €13,900 · 4 weeks</p></div></article>
-        <article class="s-proj"><div class="ph"><i class="m-linen"></i><i class="m-oak-d"></i><i class="m-stone"></i></div><div><h3>Wittevrouwen apartment</h3><p>Whole home, Utrecht · €58,000 · 11 weeks</p></div></article>
+        <article class="s-proj"><div class="pj-img"><span class="pj-tag">Kitchen · 2025</span><i class="m-oak"></i><i class="m-terrazzo"></i><i class="m-zellige"></i></div><div><h3>Oudwijk kitchen</h3><p>1930s terrace, Utrecht · €19,400 · 6 weeks</p></div></article>
+        <article class="s-proj"><div class="pj-img"><span class="pj-tag">Bathroom · 2025</span><i class="m-plaster"></i><i class="m-linen"></i><i class="m-brass"></i></div><div><h3>Canal house bathroom</h3><p>Jordaan, Amsterdam · €13,900 · 4 weeks</p></div></article>
+        <article class="s-proj"><div class="pj-img"><span class="pj-tag">Whole home · 2024</span><i class="m-linen"></i><i class="m-oak-d"></i><i class="m-stone"></i></div><div><h3>Wittevrouwen apartment</h3><p>Whole home, Utrecht · €58,000 · 11 weeks</p></div></article>
       </div>
     </div>
   </section>
